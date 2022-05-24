@@ -1,0 +1,35 @@
+<mvc:View
+    controllerName="blueboot.uy.webpayapp.controller.Worklist"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:semantic="sap.f.semantic"
+    xmlns:core="sap.ui.core" 
+    xmlns:layout="sap.ui.layout">
+
+    <semantic:SemanticPage
+        id="page"
+        headerPinnable="false"
+        toggleHeaderOnTitleClick="false">
+
+        <semantic:titleHeading>
+            <Title
+                text="{i18n>worklistTitle}"
+                level="H2"/>
+        </semantic:titleHeading>
+
+        <semantic:content>
+        <layout:VerticalLayout >
+        <Label text="Monto a pagar"/>
+           <Input id="Monto" />
+           <Button text="Generar Link de Pago" press="onGenerarLink" />
+                      <core:HTML   id="HTMLForm" />
+                       </layout:VerticalLayout >
+        </semantic:content>
+
+        <semantic:sendEmailAction>
+          
+        </semantic:sendEmailAction>
+
+    </semantic:SemanticPage>
+
+</mvc:View>

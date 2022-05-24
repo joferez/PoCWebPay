@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:DataServices>
+        <Schema Namespace="webPay" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="Pay" EntityType="webPay.Pay"/>
+            </EntityContainer>
+            <EntityType Name="Pay">
+                <Key>
+                    <PropertyRef Name="token"/>
+                </Key>
+                <Property Name="token" Type="Edm.String" Nullable="false"/>
+                <Property Name="urlForm" Type="Edm.String"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
